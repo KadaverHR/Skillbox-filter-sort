@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Список студентов</title>
+
+  <script defer type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <form id="addStudentForm" class="form" action="">
+      <div class="form__box">
+        <p class="form__title">Добавление нового студента</p>
+        <label class="form__label" for="fullname">
+          <p class="form__label-text">
+            Ф.И.О.
+          </p>
+          <input class="form__input" type="text" name="fullname" id="fullname" placeholder="Фамилия Имя Отчество">
+        </label>
+        <label class="form__label" for="faculty">
+          <p class="form__label-text">
+            Факультет
+          </p>
+          <input class="form__input" type="text" name="faculty" id="faculty" placeholder="Факультет">
+        </label>
+        <label class="form__label" for="birthdate">
+          <p class="form__label-text">
+            Дата рождения
+          </p>
+          <input class="form__input" type="date" name="birthdate" id="birthdate" placeholder="Дата рождения">
+        </label>
+        <label class="form__label" for="startYear">
+          <p class="form__label-text">
+            Год начала обучения
+          </p>
+          <input class="form__input" type="number" name="startYear" id="startYear" placeholder="Год начала обучения">
+        </label>
+        <button class="form__button" id="addStudent" type="submit">Добавить</button>
+      </div>
+
+    </form>
+
+    <!-- <div>
+      <input class="filter__input" id="studentFilterName" type="text" placeholder="Имя">
+      <input class="filter__input" id="studentFilterFaculty" type="text" placeholder="Факультет">
+      <input type="number" class="filter__input" id="studentFilterStartYear" type="text"
+        placeholder="Год начала обучения">
+      <input type="number" class="filter__input" id="studentFilterEndYear" type="text" placeholder="Год конца обучения">
+    </div> -->
+
+
+    <div class="student-list__box student-list__box--header">
+      <div class="student-list__item">
+        <p class="student-item__title">
+          ФИО студента
+        </p>
+        <button class="sort__btn" id="studentSortName">
+          <img src="img/sort.svg" alt="">
+        </button>
+      </div>
+      <div class="student-list__item">
+        <p class="student-item__title">
+          Факультет
+        </p>
+        <button class="sort__btn" id="studentSortFaculty">
+          <img src="img/sort.svg" alt="">
+        </button>
+
+      </div>
+      <div class="student-list__item">
+        <p class="student-item__title">
+          Дата рождения (возраст)
+        </p>
+        <button class="sort__btn" id="studentSortBirth">
+          <img src="img/sort.svg" alt="">
+        </button>
+      </div>
+      <div class="student-list__item">
+        <p class="student-item__title">
+          Годы обучения (номер курса)
+        </p>
+        <button class="sort__btn" id="studentSortCourse">
+          <img src="img/sort.svg" alt="">
+        </button>
+
+      </div>
+    </div>
+
+
+
+    <div class="student-list__box filter">
+      <div class="student-list__item">
+        <div class="filter-box">
+          <input class="filter__input" id="studentFilterName" type="text" placeholder="Имя">
+        </div>
+      </div>
+      <div class="student-list__item">
+        <div class="filter-box">
+          <input class="filter__input" id="studentFilterFaculty" type="text" placeholder="Факультет">
+        </div>
+      </div>
+      <div class="student-list__item">
+      </div>
+      <div class="student-list__item">
+        <div class="filter-box__year-box">
+          <div class="filter-box">
+            <input type="number" class="filter__input" id="studentFilterStartYear" type="text"
+              placeholder="Год нач. обучения">
+          </div>
+          <p>-</p>
+          <div class="filter-box">
+            <input type="number" class="filter__input" id="studentFilterEndYear" type="text"
+              placeholder="Год оконч. обучения">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div id="studentList" class="student-list">
+
+    </div>
+
+
+
+  </div>
+
+
+</body>
+
+</html>
